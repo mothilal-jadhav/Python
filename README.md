@@ -40,4 +40,26 @@ So beyond these data types, we can actually create our own using something calle
 We also have something called specialized data types.
 And these specialized data types they're not built into Python, but they're special packages and modules that we can use from libraries.
 
-lets see some of its examples in the jupiter notebook name Practice where we can see and practise the codes 
+lets see some of its examples in the jupiter notebook name Practice where we can see and practise the codes
+
+---
+
+# OPERATOR PRECEDENCE
+
+Think of operator precedence like the **order of operations in math class**. When we have a math problem like `2 + 3 × 4`, we don't just go left to right—you know multiplication comes before addition, so the answer is 14, not 20.
+
+Python follows similar rules! This is super important because it affects what your code actually does.
+
+## The Basic Rules
+
+| Order | Operators | Example | What Happens |
+|-------|-----------|---------|--------------|
+| **1st** 🏆 | `()` Parentheses | `(2 + 3) * 4 = 20` | Do what's in parentheses FIRST |
+| **2nd** | `**` Exponentiation | `2 ** 3 * 2 = 16` | Power before multiplication |
+| **3rd** | `*` `/` `//` `%` | `10 + 2 * 5 = 20` | Multiply/divide before add/subtract |
+| **4th** | `+` `-` | `10 + 2 - 3 = 9` | Add/subtract left to right |
+| **5th** | Comparisons | `5 > 3 and 2 < 4` | Compare before `and` |
+| **6th** | `and` | `True and False or True = True` | `and` before `or` |
+| **7th** 🐢 | `or` | (lowest priority) | Do this last |
+
+**Always use parentheses when unsure!** It makes code clear
