@@ -54,13 +54,13 @@ Python follows similar rules! This is super important because it affects what yo
 
 | Order | Operators | Example | What Happens |
 |-------|-----------|---------|--------------|
-| **1st** 🏆 | `()` Parentheses | `(2 + 3) * 4 = 20` | Do what's in parentheses FIRST |
+| **1st** | `()` Parentheses | `(2 + 3) * 4 = 20` | Do what's in parentheses FIRST |
 | **2nd** | `**` Exponentiation | `2 ** 3 * 2 = 16` | Power before multiplication |
 | **3rd** | `*` `/` `//` `%` | `10 + 2 * 5 = 20` | Multiply/divide before add/subtract |
 | **4th** | `+` `-` | `10 + 2 - 3 = 9` | Add/subtract left to right |
 | **5th** | Comparisons | `5 > 3 and 2 < 4` | Compare before `and` |
 | **6th** | `and` | `True and False or True = True` | `and` before `or` |
-| **7th** 🐢 | `or` | (lowest priority) | Do this last |
+| **7th** | `or` | (lowest priority) | Do this last |
 
 **Always use parentheses when unsure!** It makes code clear
 
@@ -92,3 +92,53 @@ print(bin(255)) # Output: 0b11111111
 - `bin()` returns a string starting with `0b`.
 - `bin(x)[2:]` gives only the binary digits.
 - Use `bin()` when we want to see a number in binary or work with bits.
+
+# Variables
+
+A variable is a name we give to a value so the computer can remember it. Think of it like a labeled box: you put a value inside, and later you can use the box name to get that value.
+
+## How to create a variable
+
+```python
+x = 10
+name = "Aisha"
+price = 25.50
+is_student = True
+```
+
+In Python:
+- `=` means assignment (store a value in a variable)
+- The variable name is on the left
+- The value is on the right
+
+## Variable rules
+
+- Variable names can use letters, numbers, and underscores: `age_1`, `first_name`
+- Names must start with a letter or underscore, not a number
+- No spaces are allowed in variable names
+- Use lowercase and underscores for simple names: `student_age`
+
+## Why variables are useful
+
+Variables let us reuse values and make code easier to read.
+
+```python
+age = 18
+message = "You are " + str(age) + " years old"
+print(message)
+```
+
+## Multiple variables at once
+
+```python
+a, b, c = 1, 2, 3
+print(a, b, c)
+
+x = y = 5
+print(x, y)
+```
+
+### note
+- Variables can hold any type of data: numbers, text, lists, and more.
+- Changing a variable value is easy: `x = 10` then `x = 20`.
+- Good variable names makes code much easier to understand.
