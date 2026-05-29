@@ -63,3 +63,32 @@ Python follows similar rules! This is super important because it affects what yo
 | **7th** 🐢 | `or` | (lowest priority) | Do this last |
 
 **Always use parentheses when unsure!** It makes code clear
+
+# DATA TYPES - `bin`
+
+The `bin()` function converts an integer into a binary string. Computers use binary to represent numbers with only `0` and `1`.
+
+For example:
+
+```python
+number = 5
+binary_value = bin(number)
+print(binary_value)  # Output: 0b101
+
+# If we want to remove the '0b' prefix
+binary_digits = bin(number)[2:]
+print(binary_digits)  # Output: 101
+```
+
+More examples:
+
+```python
+print(bin(2))   # Output: 0b10
+print(bin(10))  # Output: 0b1010
+print(bin(255)) # Output: 0b11111111
+```
+
+### note
+- `bin()` returns a string starting with `0b`.
+- `bin(x)[2:]` gives only the binary digits.
+- Use `bin()` when we want to see a number in binary or work with bits.
