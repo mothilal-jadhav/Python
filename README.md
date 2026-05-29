@@ -14,14 +14,14 @@ master for any sort of language, including Python.
 
 # DATA TYPES
 
-int
-float
-bool
-str
-list
-tuple
-set
-dict
+- int
+- float
+- bool
+- str
+- list
+- tuple
+- set
+- dict
 
 These are the data types.
 
@@ -39,3 +39,5 @@ So beyond these data types, we can actually create our own using something calle
 
 We also have something called specialized data types.
 And these specialized data types they're not built into Python, but they're special packages and modules that we can use from libraries.
+
+lets see some of its examples in the jupiter notebook name Practice where we can see and practise the codes 
