@@ -1,4 +1,4 @@
-In order for any programmer to learn a language, there are four key things that we need to really
+In order for any programmer to learn a language, there are few key things that we need to really
 master for any sort of language, including Python.
 
 -> First are the terms of that language.
