@@ -346,3 +346,45 @@ print(message)  # Output: Sarah is 20 years old
 - Indexing starts at 0; negative numbers count from the end
 - String methods don't change the original string; they return a new one
 - Use f-strings for easy variable insertion into strings
+
+---
+
+# Data Types - Boolean
+
+A **Boolean** is a simple data type with only two values: `True` or `False`.
+
+Booleans are often used for conditions, decisions, and checks.
+
+```python
+is_raining = False
+is_sunny = True
+
+print(is_raining)  # Output: False
+print(is_sunny)    # Output: True
+```
+
+## Boolean expressions
+
+A Boolean expression compares values or checks conditions, and it returns either `True` or `False`.
+
+```python
+print(5 > 3)       # Output: True
+print(2 == 4)      # Output: False
+print(10 <= 10)    # Output: True
+print("hi" != "hello")  # Output: True
+```
+
+## Boolean logic
+
+```python
+print(True and False)  # Output: False
+print(True or False)   # Output: True
+print(not True)        # Output: False
+```
+
+## Things to remember
+
+- `True` and `False` are capitalized in Python
+- Use Booleans to store yes/no, on/off, pass/fail style values
+- Boolean expressions are used in `if` statements and loops
+
