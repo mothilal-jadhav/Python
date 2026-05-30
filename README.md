@@ -210,3 +210,90 @@ x = 5 + 3              # Statement with an expression inside
 - **Statements** are used to make things happen or change state
 - Many statements contain expressions inside them
 - Understanding this helps us debug when something doesn't work as expected
+
+---
+
+# Augmented Assignment Operators
+
+Augmented assignment operators are shortcuts that combine an operation with assignment. Instead of writing `x = x + 5`, you can write `x += 5`. They make your code cleaner and more readable.
+
+## Common Augmented Assignment Operators
+
+| Operator | Example | Equivalent to | What it does |
+|----------|---------|---------------|--------------|
+| `+=` | `x += 5` | `x = x + 5` | Add and assign |
+| `-=` | `x -= 3` | `x = x - 3` | Subtract and assign |
+| `*=` | `x *= 2` | `x = x * 2` | Multiply and assign |
+| `/=` | `x /= 4` | `x = x / 4` | Divide and assign |
+| `//=` | `x //= 2` | `x = x // 2` | Floor divide and assign |
+| `%=` | `x %= 3` | `x = x % 3` | Modulo and assign |
+| `**=` | `x **= 2` | `x = x ** 2` | Exponentiate and assign |
+
+## Examples
+
+### Addition and subtraction
+```python
+count = 10
+count += 5        # count is now 15
+count -= 3        # count is now 12
+print(count)      # Output: 12
+```
+
+### Multiplication and division
+```python
+price = 100
+price *= 1.1      # Increase by 10% (multiply by 1.1)
+print(price)      # Output: 110.0
+
+price /= 2        # Cut in half
+print(price)      # Output: 55.0
+```
+
+### With strings
+```python
+message = "Hello"
+message += " World"    # Concatenate
+print(message)         # Output: Hello World
+
+text = "ab"
+text *= 3              # Repeat 3 times
+print(text)            # Output: ababab
+```
+
+### With lists
+```python
+my_list = [1, 2, 3]
+my_list += [4, 5]      # Add more items
+print(my_list)         # Output: [1, 2, 3, 4, 5]
+```
+
+## Why use augmented operators?
+
+1. **Shorter code**: `x += 1` is cleaner than `x = x + 1`
+2. **Less repetition**: You don't repeat the variable name
+3. **Faster to type**: Once you're used to them, they're quicker
+4. **Same meaning**: Everyone knows what `+=` means
+
+## Example comparison
+
+```python
+# Without augmented operators
+score = 0
+score = score + 10
+score = score + 5
+score = score * 2
+print(score)  # Output: 30
+
+# With augmented operators (same result, cleaner code)
+score = 0
+score += 10
+score += 5
+score *= 2
+print(score)  # Output: 30
+```
+
+## Things to remember
+
+- Augmented operators work with all data types that support the operation (numbers, strings, lists, etc.)
+- They always modify the original variable—there's no new variable created
+- Use them when you're updating a variable with an operation
