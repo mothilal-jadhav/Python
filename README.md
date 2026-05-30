@@ -215,7 +215,7 @@ x = 5 + 3              # Statement with an expression inside
 
 # Augmented Assignment Operators
 
-Augmented assignment operators are shortcuts that combine an operation with assignment. Instead of writing `x = x + 5`, you can write `x += 5`. They make your code cleaner and more readable.
+Augmented assignment operators are shortcuts that combine an operation with assignment. Instead of writing `x = x + 5`, i can write `x += 5`. They make our code cleaner and more readable.
 
 ## Common Augmented Assignment Operators
 
@@ -249,51 +249,100 @@ price /= 2        # Cut in half
 print(price)      # Output: 55.0
 ```
 
-### With strings
-```python
-message = "Hello"
-message += " World"    # Concatenate
-print(message)         # Output: Hello World
-
-text = "ab"
-text *= 3              # Repeat 3 times
-print(text)            # Output: ababab
-```
-
-### With lists
-```python
-my_list = [1, 2, 3]
-my_list += [4, 5]      # Add more items
-print(my_list)         # Output: [1, 2, 3, 4, 5]
-```
-
-## Why use augmented operators?
-
-1. **Shorter code**: `x += 1` is cleaner than `x = x + 1`
-2. **Less repetition**: You don't repeat the variable name
-3. **Faster to type**: Once you're used to them, they're quicker
-4. **Same meaning**: Everyone knows what `+=` means
-
-## Example comparison
-
-```python
-# Without augmented operators
-score = 0
-score = score + 10
-score = score + 5
-score = score * 2
-print(score)  # Output: 30
-
-# With augmented operators (same result, cleaner code)
-score = 0
-score += 10
-score += 5
-score *= 2
-print(score)  # Output: 30
-```
-
 ## Things to remember
 
 - Augmented operators work with all data types that support the operation (numbers, strings, lists, etc.)
 - They always modify the original variable—there's no new variable created
 - Use them when you're updating a variable with an operation
+
+---
+
+# Data Types -  String
+
+A **string** is text data. It can contain letters, numbers, spaces, and symbols. In Python, we create a string by putting text inside quotes (single or double).
+
+## Creating Strings
+
+```python
+name = "Alice"
+greeting = 'Hello'
+message = "Python is awesome!"
+empty = ""
+```
+
+Both single and double quotes work the same way.
+
+## Common String Operations
+
+### Concatenation (joining strings)
+```python
+first = "Hello"
+second = "World"
+result = first + " " + second
+print(result)  # Output: Hello World
+```
+
+### Repetition (repeating strings)
+```python
+word = "Ha"
+laugh = word * 3
+print(laugh)  # Output: HaHaHa
+```
+
+### Length (counting characters)
+```python
+text = "Python"
+print(len(text))  # Output: 6
+```
+
+### Accessing characters (indexing)
+```python
+word = "Code"
+print(word[0])  # Output: C (first character)
+print(word[2])  # Output: d (third character)
+print(word[-1]) # Output: e (last character)
+```
+
+### Slicing (getting parts of a string)
+```python
+text = "Python"
+print(text[0:2])   # Output: Py (characters 0 and 1)
+print(text[1:4])   # Output: yth
+print(text[:3])    # Output: Pyt (from start to index 2)
+print(text[3:])    # Output: hon (from index 3 to end)
+```
+
+## Useful String Methods
+
+```python
+text = "Hello World"
+
+print(text.lower())        # Output: hello world
+print(text.upper())        # Output: HELLO WORLD
+print(text.replace("World", "Python"))  # Output: Hello Python
+print(text.split())        # Output: ['Hello', 'World']
+print(text.startswith("Hello"))  # Output: True
+print(text.count("l"))     # Output: 3
+```
+
+## String Formatting
+
+```python
+name = "Sarah"
+age = 20
+
+# Using f-strings (modern way)
+message = f"{name} is {age} years old"
+print(message)  # Output: Sarah is 20 years old
+
+# Using format()
+message = "{} is {} years old".format(name, age)
+print(message)  # Output: Sarah is 20 years old
+```
+
+## Things to Remember
+
+- Strings are immutable, we can't change a character directly
+- Indexing starts at 0; negative numbers count from the end
+- String methods don't change the original string; they return a new one
+- Use f-strings for easy variable insertion into strings
