@@ -142,3 +142,71 @@ print(x, y)
 - Variables can hold any type of data: numbers, text, lists, and more.
 - Changing a variable value is easy: `x = 10` then `x = 20`.
 - Good variable names makes code much easier to understand.
+
+---
+
+# Expression vs Statement
+
+These are two different things we see while coding
+
+## What's an Expression?
+
+An **expression** is a piece of code that **produces a value**. It gets evaluated and gives you back a result.
+
+Examples:
+```python
+5 + 3          # Expression: produces 8
+10 * 2         # Expression: produces 20
+"hello" + " world"  # Expression: produces "hello world"
+3 > 2          # Expression: produces True
+```
+
+Key point: Expressions can be used anywhere a value is expected.
+
+## What's a Statement?
+
+A **statement** is an instruction that **does something** but doesn't necessarily give you back a value. It tells Python to take an action.
+
+Examples:
+```python
+x = 5          # Statement: assigns 5 to x
+print("Hi")    # Statement: prints something to screen
+if x > 3:      # Statement: conditional instruction
+    print("x is bigger")
+```
+
+Key point: Statements perform actions.
+
+## The Main Difference
+
+```python
+# EXPRESSION - produces a value
+result = 2 + 3         # The 2 + 3 part is an expression
+print(2 + 3)           # 2 + 3 is an expression, gives 5
+
+# STATEMENT - does something
+x = 10                 # This is a statement (assignment)
+if x > 5:              # This is a statement (conditional)
+    print("x is big")  # This is a statement (function call)
+```
+
+## Real example to see the difference
+
+```python
+# Expression inside a statement
+age = 18 + 2           # (18 + 2) is an expression, = is a statement
+print(age * 2)         # age * 2 is an expression, print() is a statement
+
+# Can't do this (wrong!)
+5 + 3 = x              # Error! Expression can't be on the left side
+
+# This works (right!)
+x = 5 + 3              # Statement with an expression inside
+```
+
+## Why this matters
+
+- **Expressions** are used to calculate or compare values
+- **Statements** are used to make things happen or change state
+- Many statements contain expressions inside them
+- Understanding this helps us debug when something doesn't work as expected
