@@ -506,3 +506,82 @@ print(row_sum)  # Output: 15
 - Lists are ordered and mutable.
 - Use `append`, `insert`, `remove`, `pop` to change lists.
 - List comprehensions are a compact way to build lists.
+
+---
+
+# Data Types - Dictionary
+
+A **dictionary** is an unordered collection of key-value pairs. It's mutable and optimized for fast lookups using keys instead of indices.
+
+## Creating dictionaries
+
+```python
+student = {"name": "Alice", "age": 20, "grade": "A"}
+empty = {}
+person = dict(name="Bob", age=25)
+
+print(student)  # Output: {'name': 'Alice', 'age': 20, 'grade': 'A'}
+```
+
+## Access & modify
+
+```python
+print(student["name"])      # Output: Alice
+print(student.get("age"))   # Output: 20
+print(student.get("city", "N/A"))  # Output: N/A (default if not found)
+
+student["age"] = 21         # change value
+student["city"] = "NYC"     # add new key-value pair
+```
+
+## Dictionary methods
+
+```python
+# Keys, values, items
+print(student.keys())       # Output: dict_keys(['name', 'age', 'grade', 'city'])
+print(student.values())     # Output: dict_values(['Alice', 21, 'A', 'NYC'])
+print(student.items())      # Output: dict_items([('name', 'Alice'), ...])
+
+# Add/remove
+student.update({"gpa": 3.8})  # add or update multiple
+value = student.pop("city")   # remove and return
+print(value)                # Output: NYC
+
+student.clear()             # remove all items
+```
+
+## Useful operations
+
+```python
+student = {"name": "Alice", "age": 20, "grade": "A"}
+
+print("name" in student)    # Output: True
+print(len(student))         # Output: 3
+print(student.copy())       # shallow copy
+
+# Iterate over dictionary
+for key in student:
+    print(key, student[key])
+
+for k, v in student.items():
+    print(f"{k}: {v}")
+```
+
+## Dictionary comprehension
+
+```python
+squares = {x: x*x for x in range(5)}
+print(squares)  # Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# Filter dictionary
+filtered = {k: v for k, v in student.items() if v != "A"}
+print(filtered)
+```
+
+### Things to remember
+- Dictionaries are unordered (in older Python) and mutable.
+- Keys must be unique and immutable (strings, numbers, tuples).
+- Values can be any data type.
+- Use `.get()` to safely access keys with a default fallback.
+- `.keys()`, `.values()`, `.items()` are useful for iteration.
+- Dictionary comprehensions are a compact way to build dictionaries.
