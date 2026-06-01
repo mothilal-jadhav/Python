@@ -74,3 +74,126 @@ text.upper()
 
 The string object contains the method upper().
 
+---
+
+# Comments
+
+Comments are ignored by Python and are for humans to read.
+
+Single-line comment:
+
+```python
+# This is a comment
+x = 5  # Initialize x
+```
+
+Multi-line comment (using strings):
+
+```python
+"""
+This is a multi-line comment.
+It spans several lines.
+"""
+
+'''
+Another way to write
+multi-line comments.
+'''
+```
+
+### When to use comments
+
+- Explain complex logic
+- Document why, not what (the code shows what)
+- Mark important sections
+
+Bad comment:
+
+```python
+x = x + 1  # add 1 to x
+```
+
+Good comment:
+
+```python
+# Reset counter after threshold reached
+counter = 0
+```
+
+---
+
+# Print and Input
+
+### Print function
+
+Output text to the console:
+
+```python
+print("Hello, World!")
+print(123)
+print(True)
+```
+
+Multiple arguments:
+
+```python
+print("Name:", "Alice", "Age:", 25)
+# Output: Name: Alice Age: 25
+```
+
+No newline:
+
+```python
+print("Hello", end="")
+print(" World")
+# Output: Hello World
+```
+
+### Input function
+
+Get text from the user:
+
+```python
+name = input("Enter your name: ")
+print("Hello, " + name)
+```
+
+Input always returns a string:
+
+```python
+age = input("Enter your age: ")
+print(type(age))  # <class 'str'>
+
+# Convert to int
+age = int(age)
+```
+
+---
+
+# Data Types Overview
+
+Python has several built-in data types:
+
+| Type | Example | Mutable |
+|------|---------|---------|
+| int | `5`, `-10` | No |
+| float | `3.14`, `-0.5` | No |
+| str | `"hello"` | No |
+| bool | `True`, `False` | No |
+| list | `[1, 2, 3]` | Yes |
+| tuple | `(1, 2, 3)` | No |
+| dict | `{"name": "Alice"}` | Yes |
+| set | `{1, 2, 3}` | Yes |
+
+### Type conversion
+
+```python
+int("123")        # 123
+float("3.14")     # 3.14
+str(100)          # "100"
+list("abc")       # ['a', 'b', 'c']
+bool(1)           # True
+bool(0)           # False
+```
+
+---
