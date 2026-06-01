@@ -717,7 +717,72 @@ False
 
 ---
 
+## `is` vs `==`
+
+These look similar but do very different things.
+
+### `==` — value equality
+
+Checks if two values are the same.
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+
+print(a == b)  # True
+```
+
+Both lists contain the same values, so they are equal.
+
+### `is` — object identity
+
+Checks if two variables point to the same object in memory.
+
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+
+print(a is b)  # False (different objects)
+print(a is c)  # True (same object)
+```
+
+Even though `a` and `b` have the same values, they are different objects.
+
+`c` and `a` point to the exact same object.
+
+### When to use each
+
+Use `==` for most comparisons:
+
+```python
+if user_input == expected_value:
+    proceed()
+```
+
+Use `is` only when checking identity, typically with `None`:
+
+```python
+if value is None:
+    handle_missing()
+
+if value is not None:
+    process(value)
+```
+
+### Key rule
+
+```text
+is = identity (same object in memory)
+== = equality (same value)
+```
+
+Almost always use `==` unless we explicitly need to check if two variables reference the exact same object.
+
+---
+
 # Logical Operators
+
 
 ## and
 
