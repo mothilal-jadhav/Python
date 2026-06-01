@@ -423,6 +423,28 @@ squares = [x*x for x in range(5)]
 print(squares)  # Output: [0, 1, 4, 9, 16]
 ```
 
+## Matrix with lists
+
+A matrix is a list of lists: each inner list is a row.
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print(matrix[0])      # Output: [1, 2, 3]  (first row)
+print(matrix[1][2])   # Output: 6          (row 2, column 3)
+```
+
+## Matrix example: sum of a row
+
+```python
+row_sum = sum(matrix[1])
+print(row_sum)  # Output: 15
+```
+
 ### Things to remember
 - Lists are ordered and mutable.
 - Use `append`, `insert`, `remove`, `pop` to change lists.
