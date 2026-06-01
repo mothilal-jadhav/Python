@@ -388,3 +388,42 @@ print(not True)        # Output: False
 - Use Booleans to store yes/no, on/off, pass/fail style values
 - Boolean expressions are used in `if` statements and loops
 
+# DATA TYPE - Lists
+A **list** is an ordered collection that can hold items of different types. Lists are mutable — we can change them after creation.
+
+## Creating lists
+
+```python
+nums = [1, 2, 3]
+mix = [1, "two", 3.0, True]
+empty = []
+```
+
+## Access & modify
+
+```python
+print(nums[0])    # Output: 1
+nums[1] = 20      # change second item
+nums.append(4)    # add at end
+nums.pop()        # remove last item
+```
+
+## Useful operations
+
+```python
+print(len(nums))      # length
+print(nums[1:3])      # slicing
+print(2 in nums)      # membership test
+```
+
+## list comprehension
+
+```python
+squares = [x*x for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
+```
+
+### Things to remember
+- Lists are ordered and mutable.
+- Use `append`, `insert`, `remove`, `pop` to change lists.
+- List comprehensions are a compact way to build lists.
