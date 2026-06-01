@@ -399,22 +399,55 @@ mix = [1, "two", 3.0, True]
 empty = []
 ```
 
-## Access & modify
+## List methods
 
 ```python
-print(nums[0])    # Output: 1
-nums[1] = 20      # change second item
-nums.append(4)    # add at end
-nums.pop()        # remove last item
-```
+nums = [3, 1, 2]
 
-## Useful operations
+nums.append(4)          # add one item at end
+nums.extend([5, 6])     # add many items at end
+nums.insert(1, 10)      # insert 10 at index 1
+nums.remove(1)          # remove first item equal to 1
+last = nums.pop()       # remove and return last item
+print(nums)             # Output: [3, 10, 2, 4, 5]
+print(last)             # Output: 6
+
+nums.sort()             # sort the list in place
+print(nums)             # Output: [2, 3, 4, 5, 10]
+
+nums.reverse()          # reverse the order
+print(nums)             # Output: [10, 5, 4, 3, 2]
+
+copy_nums = nums.copy() # shallow copy
+print(copy_nums)        # Output: [10, 5, 4, 3, 2]
+
+nums.clear()            # remove all items
+print(nums)             # Output: []
+```
 
 ```python
-print(len(nums))      # length
-print(nums[1:3])      # slicing
-print(2 in nums)      # membership test
+nums = [2, 3, 4, 2, 5]
+print(nums.index(4))    # Output: 2  (first position of 4)
+print(nums.count(2))    # Output: 2  (2 appears twice)
+print(len(nums))        # Output: 5
+print(3 in nums)        # Output: True
 ```
+
+## Useful functions for lists
+
+```python
+nums = [5, 2, 9, 1]
+print(sorted(nums))          # Output: [1, 2, 5, 9]
+print(min(nums), max(nums))  # Output: 1 9
+print(sum(nums))             # Output: 17
+print(list(reversed(nums)))  # Output: [1, 9, 2, 5]
+```
+
+### Things to remember
+- Lists are ordered and mutable.
+- `append`, `extend`, `insert`, `remove`, `pop`, `clear`, `sort`, `reverse`, `copy`, `index`, and `count` are the main list methods.
+- Use `sorted()` when you need a sorted copy and `nums.sort()` when you want to change the list itself.
+- `list(reversed(nums))` returns a reversed copy, while `nums.reverse()` changes the original list.
 
 ## list comprehension
 
