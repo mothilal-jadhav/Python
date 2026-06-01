@@ -413,7 +413,7 @@ Internally, a string is a sequence of Unicode characters.
 
 ---
 
-# Important Property
+## Important Property
 
 Strings are immutable.
 
@@ -437,7 +437,7 @@ A new string object is returned.
 
 ---
 
-# Indexing
+## Indexing
 
 ```python
 text = "Python"
@@ -467,7 +467,7 @@ Output:
 
 ---
 
-# Slicing
+## Slicing
 
 ```python
 text[0:2]
@@ -491,7 +491,7 @@ text[3:] #hon
 
 ---
 
-# Common Operations
+## Common Operations
 
 Length:
 
@@ -513,7 +513,7 @@ Repetition:
 
 ---
 
-# Useful Methods
+## Useful Methods
 
 ```python
 lower()
@@ -526,7 +526,7 @@ startswith()
 
 ---
 
-# String Formatting
+## String Formatting
 
 Modern Python uses f-strings.
 
@@ -663,7 +663,7 @@ clear()
 
 ---
 
-# append vs extend
+## append vs extend
 
 A common source of mistakes.
 
@@ -693,7 +693,7 @@ Result:
 
 ---
 
-# Useful Functions
+## Useful Functions
 
 ```python
 len()
@@ -705,7 +705,7 @@ sorted()
 
 ---
 
-# Membership Testing
+## Membership Testing
 
 ```python
 3 in nums
@@ -719,7 +719,7 @@ True
 
 ---
 
-# List Unpacking
+## List Unpacking
 
 Assign multiple values at once.
 
@@ -744,7 +744,7 @@ rest = [2,3,4]
 
 ---
 
-# Swapping Variables
+## Swapping Variables
 
 ```python
 x, y = y, x
@@ -754,7 +754,7 @@ One of Python's nicest features.
 
 ---
 
-# List Comprehension
+## List Comprehension
 
 A compact way to create lists.
 
@@ -793,7 +793,7 @@ in one expression.
 
 ---
 
-# Matrix Using Lists
+## Matrix Using Lists
 
 A matrix is simply:
 
@@ -860,7 +860,7 @@ student = {
 
 ---
 
-# Why Dictionaries Matter
+## Why Dictionaries Matter
 
 Fast lookup. # very useful while solving DSA
 
@@ -874,7 +874,7 @@ This is why dictionaries are used everywhere.
 
 ---
 
-# Accessing Values
+## Accessing Values
 
 ```python
 student["name"] #Alice 
@@ -898,7 +898,7 @@ student.get("city", "N/A")
 
 ---
 
-# Updating
+## Updating
 
 ```python
 student["age"] = 21
@@ -912,7 +912,7 @@ student["city"] = "Delhi" # student = {'name' = 'Alice', 'age' = 21, 'city' = 'D
 
 ---
 
-# Useful Methods
+## Useful Methods
 
 ```python
 keys()
@@ -924,7 +924,7 @@ pop()
 
 ---
 
-# Iteration
+## Iteration
 
 ```python
 for key, value in student.items():
@@ -933,7 +933,7 @@ for key, value in student.items():
 
 ---
 
-# Dictionary Comprehension
+## Dictionary Comprehension
 
 Equivalent of list comprehension for dictionaries.
 
@@ -955,3 +955,59 @@ Result:
     4:16
 }
 ```
+
+---
+
+# Sets
+
+A set is an unordered collection of unique values.
+
+Sets are useful when we need to remove duplicates, test membership quickly, or perform set operations such as union and intersection.
+
+```python
+numbers = {1, 2, 3, 3, 4}
+print(numbers)  # {1, 2, 3, 4}
+
+empty_set = set()
+```
+
+## Basic operations
+
+```python
+s = {1, 2, 3}
+
+s.add(4)
+print(s)          # {1, 2, 3, 4}
+
+s.remove(2)
+print(s)          # {1, 3, 4}
+
+print(3 in s)     # True
+```
+
+## Common set methods
+
+- `add(value)` – add a value
+- `remove(value)` – remove a value, raises `KeyError` if missing, to tackle this error we use discard
+- `discard(value)` – remove a value if present
+- `pop()` – remove and return an arbitrary element
+- `clear()` – remove all items
+- `copy()` – shallow copy of the set
+
+## Set operations
+
+```python
+a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a | b)      # union -> {1, 2, 3, 4, 5}
+print(a & b)      # intersection -> {3}
+print(a - b)      # difference -> {1, 2}
+print(a ^ b)      # symmetric difference -> {1, 2, 4, 5}
+```
+
+## Notes
+
+- Sets are unordered, so the item order is not preserved.
+- Values must be hashable (e.g. numbers, strings, tuples).
+- Use sets when uniqueness and membership checks are more important than order.
