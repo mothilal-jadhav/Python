@@ -1211,3 +1211,233 @@ print(a ^ b)      # symmetric difference -> {1, 2, 4, 5}
 - Sets are unordered, so the item order is not preserved.
 - Values must be hashable (e.g. numbers, strings, tuples).
 - Use sets when uniqueness and membership checks are more important than order.
+---
+
+# Loops
+
+Loops repeat a block of code multiple times.
+
+---
+
+## The `for` loop
+
+A `for` loop iterates over a sequence (list, tuple, string, set, dict, range, etc.).
+
+### Basic syntax
+
+```python
+for item in collection:
+    print(item)
+```
+
+### Simple example
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+Output:
+
+```
+apple
+banana
+cherry
+```
+
+### Looping over ranges
+
+`range()` generates a sequence of numbers.
+
+```python
+for i in range(5):
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+2
+3
+4
+```
+
+Range with start, stop, step:
+
+```python
+for i in range(1, 10, 2):
+    print(i)
+```
+
+Output:
+
+```
+1
+3
+5
+7
+9
+```
+
+### Enumerate — get index and value
+
+When you need both the index and value:
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for index, fruit in enumerate(fruits):
+    print(f"{index}: {fruit}")
+```
+
+Output:
+
+```
+0: apple
+1: banana
+2: cherry
+```
+
+### Zip — iterate multiple sequences together
+
+```python
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+
+for name, age in zip(names, ages):
+    print(f"{name} is {age}")
+```
+
+Output:
+
+```
+Alice is 25
+Bob is 30
+Charlie is 35
+```
+
+### Looping over dictionaries
+
+```python
+student = {"name": "Alice", "age": 20, "grade": "A"}
+
+for key, value in student.items():
+    print(f"{key}: {value}")
+```
+
+Output:
+
+```
+name: Alice
+age: 20
+grade: A
+```
+
+Only keys:
+
+```python
+for key in student:
+    print(key)
+```
+
+Only values:
+
+```python
+for value in student.values():
+    print(value)
+```
+
+### Break and continue
+
+`break` — exit the loop early:
+
+```python
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+2
+3
+4
+```
+
+`continue` — skip to the next iteration:
+
+```python
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+3
+4
+```
+
+### Else with for
+
+The `else` block runs when the loop finishes normally (not via `break`):
+
+```python
+for i in range(5):
+    if i == 10:
+        break
+else:
+    print("Loop completed successfully")
+```
+
+Output:
+
+```
+Loop completed successfully
+```
+
+If `break` is triggered, `else` does not run.
+
+### Nested loops
+
+Loops inside loops:
+
+```python
+for i in range(3):
+    for j in range(3):
+        print(f"({i}, {j})")
+```
+
+Output:
+
+```
+(0, 0)
+(0, 1)
+(0, 2)
+(1, 0)
+(1, 1)
+(1, 2)
+(2, 0)
+(2, 1)
+(2, 2)
+```
+
+### Best practices
+
+- Use clear variable names in the loop.
+- Prefer `enumerate()` when you need indices.
+- Use `zip()` to pair multiple sequences.
+- Avoid deeply nested loops; extract inner logic into functions.
+- Use `for` loops instead of manual index management when possible.
