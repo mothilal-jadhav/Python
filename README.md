@@ -311,6 +311,141 @@ if x > 3:
 
 ---
 
+## Conditional logic
+
+Conditional logic decides what code runs based on whether one or more conditions are true.
+
+### Basic form
+
+```python
+if score >= 90:
+    grade = "A"
+elif score >= 80:
+    grade = "B"
+else:
+    grade = "C"
+```
+
+- `if` checks the first condition.
+- `elif` checks additional conditions only when earlier conditions were false.
+- `else` runs when none of the preceding conditions match.
+
+### Boolean expressions
+
+Use comparison operators and logical operators together:
+
+```python
+if age >= 18 and has_id:
+    can_enter = True
+```
+
+- `and` requires both sides to be true.
+- `or` requires at least one side to be true.
+- `not` reverses the truth value.
+
+### Logical operators
+
+Python has three logical operators: `and`, `or`, and `not`.
+
+#### `and` — both must be true
+
+```python
+if age >= 18 and has_license:
+    can_drive = True
+```
+
+Returns `True` only when both operands are true.
+
+Short-circuit evaluation: if the left side is `False`, the right side is never evaluated.
+
+#### `or` — at least one must be true
+
+```python
+if is_weekend or is_holiday:
+    no_work = True
+```
+
+Returns `True` when at least one operand is true.
+
+Short-circuit evaluation: if the left side is `True`, the right side is never evaluated.
+
+#### `not` — reverses truth value
+
+```python
+if not is_logged_in:
+    redirect_to_login()
+```
+
+Inverts the boolean result.
+
+#### Chaining operators
+
+Combine multiple conditions:
+
+```python
+if age >= 13 and age < 18 and not is_banned:
+    can_access = True
+```
+
+#### Precedence reminder
+
+`not` > `and` > `or`
+
+Use parentheses for clarity:
+
+```python
+if (x > 5 and y < 10) or (z == 0):
+    process()
+```
+
+### Common patterns
+
+
+```python
+if value in collection:
+    process(value)
+
+if not items:
+    handle_empty()
+```
+
+### Best practices
+
+- Keep each condition simple and readable.
+- Prefer explicit comparisons over truthy/falsy shortcuts when clarity matters.
+- Use parentheses to clarify complex logical expressions.
+
+### Ternary operator
+
+Compact inline conditional:
+
+```python
+grade = "Pass" if score >= 60 else "Fail"
+```
+
+Form:
+
+```python
+value_if_true if condition else value_if_false
+```
+
+Use sparingly—avoid nested ternaries since they become hard to read:
+
+```python
+# Bad - avoid
+status = "A" if x > 90 else "B" if x > 80 else "C"
+
+# Good - use if/elif/else instead
+if x > 90:
+    status = "A"
+elif x > 80:
+    status = "B"
+else:
+    status = "C"
+```
+
+---
+
 ## Core Idea
 
 Expression:
