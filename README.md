@@ -1441,3 +1441,90 @@ Output:
 - Use `zip()` to pair multiple sequences.
 - Avoid deeply nested loops; extract inner logic into functions.
 - Use `for` loops instead of manual index management when possible.
+
+---
+
+## The `while` loop
+
+A `while` loop repeats as long as a condition remains true. Use it when the number of iterations is not known in advance.
+
+### Basic syntax
+
+```python
+while condition:
+    do_something()
+```
+
+### Simple example
+
+```python
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+```
+
+Output:
+
+```
+0
+1
+2
+3
+4
+```
+
+### Common patterns
+
+- Use `while True` for loops that run until an explicit `break` condition:
+
+```python
+while True:
+    data = read()
+    if not data:
+        break
+    process(data)
+```
+
+- Use a loop variable to control termination when input or external state determines the end.
+
+### Avoiding infinite loops
+
+- Ensure the loop condition will eventually become false.
+- Update loop variables inside the loop.
+- Add timeouts or iteration limits when dealing with external input.
+
+### Break and continue with while
+
+`break` exits the loop immediately; `continue` jumps to the next condition check.
+
+```python
+i = 0
+while i < 10:
+    i += 1
+    if i % 2 == 0:
+        continue
+    print(i)
+    if i > 7:
+        break #1,3,5 
+```
+
+### Else with while
+
+Like `for`, `while` supports `else` which runs only when the loop terminates normally (no `break`).
+
+```python
+attempts = 0
+while attempts < 3:
+    if try_login():
+        print("Logged in")
+        break
+    attempts += 1
+else:
+    print("Failed after 3 attempts")
+```
+
+### When to use `while` vs `for`
+
+- Use `for` when iterating over a sequence or a known number of steps.
+- Use `while` when continuation depends on external state, input, or an unpredictable condition.
