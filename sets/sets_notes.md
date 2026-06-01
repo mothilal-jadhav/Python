@@ -79,18 +79,6 @@ Be careful: comprehensions may drop duplicates and the iteration order is undefi
 
 ---
 
-## `frozenset`
-
-- Immutable and hashable — can be used as dictionary keys or elements of other sets.
-- Created with `frozenset(iterable)`.
-
-```python
-fs = frozenset([1,2,3])
-mapping = {fs: 'value'}
-```
-
----
-
 ## Use cases
 
 - Remove duplicates: `unique = set(items)`
@@ -99,31 +87,3 @@ mapping = {fs: 'value'}
 - Track visited items (e.g., graph traversal)
 
 ---
-
-## Pitfalls and tips
-
-- Sets are unordered — do not rely on insertion order (Python 3.7+ preserves insertion order for dicts but not guaranteed for sets).
-- Elements must be hashable. Use tuples instead of lists when you need compound elements.
-- Converting back to a list will produce an arbitrary order; sort if order matters: `sorted(s)`.
-- For large datasets, consider `frozenset` if you need immutability or hashing.
-
----
-
-## Performance notes
-
-- Membership (`in`) and add/remove are on average O(1).
-- Set operations (union, intersection, difference) are implemented in C and generally fast.
-- For small fixed collections, tuples may be more memory-efficient.
-
----
-
-## Quick reference
-
-- Create: `{1,2}` or `set(iterable)`
-- Add: `s.add(x)` — Remove: `s.discard(x)` / `s.remove(x)`
-- Union/Intersection/Difference: `|`, `&`, `-`
-- Comprehension: `{f(x) for x in iterable if cond}`
-- Immutable set: `frozenset(iterable)`
-
-End of sets notes.
-
