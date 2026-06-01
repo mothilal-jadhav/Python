@@ -449,6 +449,30 @@ print(list(reversed(nums)))  # Output: [1, 9, 2, 5]
 - Use `sorted()` when you need a sorted copy and `nums.sort()` when you want to change the list itself.
 - `list(reversed(nums))` returns a reversed copy, while `nums.reverse()` changes the original list.
 
+## List unpacking
+
+Unpacking lets you assign list items to multiple variables at once.
+
+```python
+nums = [10, 20, 30]
+a, b, c = nums
+print(a, b, c)  # Output: 10 20 30
+
+# Unpack first and rest
+first, *rest = [1, 2, 3, 4]
+print(first)    # Output: 1
+print(rest)     # Output: [2, 3, 4]
+
+# Unpack first, middle, last
+a, *middle, z = [1, 2, 3, 4, 5]
+print(a, middle, z)  # Output: 1 [2, 3, 4] 5
+
+# Swap two variables
+x, y = [5, 10]
+x, y = y, x  # swap using unpacking
+print(x, y)  # Output: 10 5
+```
+
 ## list comprehension
 
 ```python
