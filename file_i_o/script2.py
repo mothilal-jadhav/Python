@@ -70,3 +70,22 @@ bye my name is Virat Kohli
 23
 bye my name is Virat Kohli hey, i am not leaving 
 '''
+
+# i can even create a new txt file and write the content in it
+
+with open('new_text.txt', mode = 'w') as new_file:
+    print(new_file.write('welcome to new_file'))
+
+with open('new_text.txt') as file:
+    texxt = file.read()
+    print(texxt)
+
+'''
+output: 
+
+ye my name is Virat Kohli hey, i am not leaving 
+23
+bye my name is Virat Kohli hey, i am not leaving  hey, i am not leaving 
+19
+welcome to new_file
+'''
