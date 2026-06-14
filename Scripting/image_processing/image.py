@@ -1,6 +1,11 @@
 from PIL import Image, ImageFilter
-img = Image.open('/Users/mothilaljadhav/Desktop/Projects/Python/Scripting/image_processing/cricketers/blurred.jpeg')
+img = Image.open('/Users/mothilaljadhav/Desktop/Projects/Python/Scripting/image_processing/cricketers/virat_kohli.jpg')
 
-filtered_image = img.filter(ImageFilter.EMBOSS)
+filtered_image = img.convert('L')
 
-filtered_image.save('emboss.png','png')
+box = (150,150,900,900)
+region = filtered_image.crop(box)
+
+
+
+region.save('virat_kohli_cropped.png','png')
